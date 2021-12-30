@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.db import models
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.utils.text import slugify
 
 
@@ -48,7 +48,7 @@ class Categories(models.Model):
 
 class Menu(models.Model):
     item = models.CharField(max_length=120, unique=True)
-    category = models.ForeignKey(Categories)
+    category = models.ForeignKey(Categories, on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=5, decimal_places=2)
     info = models.TextField()
     policy = models.TextField()
