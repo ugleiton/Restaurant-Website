@@ -1,7 +1,7 @@
 # Restaurant-Website
 This is a Restaurant Website.
 
-Django Version Used 1.11.3
+Django Version Used 4.0
 
 #
 # REST API Implemented.
